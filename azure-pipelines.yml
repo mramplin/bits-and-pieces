@@ -8,8 +8,12 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
+    
 steps:
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: 'latest'
+
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
